@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/userlistFragment"
+    android:id="@+id/nav_grap.xml">
+
+    <fragment
+        android:id="@+id/userlistFragment"
+        android:name="com.lydiatest.randomuser.userList.UserListFragment"
+        tools:layout="@layout/fragment_user_list"
+        android:label="UserListFragment">
+
+        <action
+            android:id="@+id/go_to_user_info"
+            app:destination="@id/userinfoFragment">
+
+            <argument
+                android:name="user"
+                app:argType="com.lydiatest.randomuser.model.User"/>
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userinfoFragment"
+        android:name="com.lydiatest.randomuser.userInfo.UserInfoFragment"
+        tools:layout="@layout/fragment_user_info"
+        android:label="UserInfoFragment"/>
+
+</navigation>
